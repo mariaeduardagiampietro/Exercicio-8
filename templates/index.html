@@ -1,0 +1,24 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento -->
+<html lang="en"> <!-- Declaração do idioma da página (inglês) -->
+<head>
+    <meta charset="UTF-8"> <!-- Declaração da codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Declaração da viewport para dispositivos móveis -->
+    <title>Verificar o nome e a senha </title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <h1>Verificar o nome e a senha</h1> <!-- Título principal da página -->
+    <form action="verificar" method="post"> <! Formulário para enviar o número para verificação
+        <label for="usuario"> Informe o usuário:</label> <!-- Rótulo do campo de entrada -->
+        <input type="text" id="usuario" name="usuario" required> <!-- Campo de entrada para o número -->
+        <label for="senha">Informe a senha:</label> <!-- Rótulo do campo de entrada -->
+        <input type="text" id="senha" name="senha" required> <!-- Campo de entrada para o número -->
+        <button type="submit">Verificar</button> <!-- Botão de envio do formulário --!>
+    </form>
+    <div id="resultado">
+        {% if resultado %} <!-- Verifica se há um resultado a ser exibido -->
+            {{ resultado }} <!-- Exibe o resultado da verificação  -->
+        {% endif %}
+        </div>
+</body>
+</html>
